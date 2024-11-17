@@ -1,12 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<he>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="app.js"></script>
-  <title>Rock, Paper or Scissor Game</title>
-</head>
-<body>
+  <head>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-</body>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 800px;
+        flex-direction: column;
+      }
+
+      #subtitle {
+        padding-block: 20px;
+      }
+
+      #score {
+        padding-block: 20px;
+      }
+
+      #buttons > button {
+        font-size: 20px;
+        margin-inline: 8px;
+        padding: 5px;
+        border-radius: 10px;
+        border: 3px solid black;
+        background: #fff;
+        &:hover {
+          cursor: pointer;
+          background: #aaa;
+        }
+      }
+      #score > h2 {
+        margin-block: 10px;
+      }
+      #result {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 150px;
+        font-size: 20px;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, Paper or Scissor Game</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Rock Paper and Scissor Game</h1>
+      <div id="subtitle">
+        <h2>Choose one to play</h2>
+      </div>
+      <div id="buttons">
+        <button id="btnRock">Rock</button>
+        <button id="btnPaper">Paper</button>
+        <button id="btnScissor">Scissor</button>
+      </div>
+      <div id="score">
+        <h2>Player Score: <span id="playerScore"></span></h2>
+        <h2>Computer Score: <span id="computerScore"></span></h2>
+      </div>
+      <div id="result"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
